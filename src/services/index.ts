@@ -1,4 +1,4 @@
-import { getModels } from "./models.service";
-import { getAnalysisData, getFeatureList } from "./analysis.service";
+import { getModels } from "./models.services";
+import { getAnalysisData, getFeatureList } from "./analysis.services";
 
 export { getModels, getAnalysisData, getFeatureList };
