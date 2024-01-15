@@ -21,7 +21,7 @@ const ModelList: FC<ModelListProps> = ({ data }) => {
     return (
       <section className="flex justify-center items-center h-[50vh] w-full">
         <Typography level="body-lg">
-          We dont have yet models to show you. Back later!
+          We don't have models to show you yet. Please check back later!
         </Typography>
       </section>
     );
