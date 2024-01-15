@@ -7,7 +7,7 @@ export const getFeatureList: () => Promise<FeatureList> = async () => {
     const response: AxiosResponse<FeatureList[]> = await axios.get(
       `${getURL()}analysis?insight_name=feature_list`
     );
-    //@ts-expect-error Hard coded beceusa a lack of contract in the reponse API
+    //@ts-expect-error: Hardcoded due to a lack of contract in the API response.
     return response.data[0].value;
   } catch (error) {
     if (axios.isAxiosError(error)) {
