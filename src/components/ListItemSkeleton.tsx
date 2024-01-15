@@ -4,7 +4,7 @@ const ListItemSkeleton = () => {
   return (
     <Card
       size="lg"
-      className="flex justify-between content-center cursor-pointer duration-150 min-h-24 hover:shadow-md hover:shadow-blue-400 mt-4"
+      className="flex justify-between items-center cursor-pointer duration-150 min-h-24 hover:shadow-md hover:shadow-blue-400 mt-4"
       orientation="horizontal"
     >
       <Typography className="font-bold self-center">
