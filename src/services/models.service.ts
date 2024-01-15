@@ -1,9 +1,10 @@
 import axios, { AxiosResponse } from "axios";
+import { getUrl } from "../api/provider";
 
 export const getModels: () => Promise<ModelsResponseItem[]> = async () => {
   try {
     const response: AxiosResponse<ModelsResponseItem[]> = await axios.get(
-      `http://localhost:5000/models`
+      `${getUrl()}models`
     );
     return response.data;
   } catch (error) {
