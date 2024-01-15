@@ -6,7 +6,7 @@ import ListItemSkeleton from "../../components/ListItemSkeleton";
 import ModelList from "../../components/ModelList";
 
 import { getModels } from "../../services";
-import { makeModelList } from "../../utils";
+import { makeModelList } from "../../utils/dataConversion";
 
 const Inventory = () => {
   const [ḿodelListData, setModelListData] = useState<ModelListItem[]>([]);
