@@ -1,5 +1,5 @@
 import { FC } from "react";
-import ListItem from "./ListItem";
+import ListItem from "../ListItem/ListItem";
 import { Typography } from "@mui/joy";
 
 type ModelListProps = {

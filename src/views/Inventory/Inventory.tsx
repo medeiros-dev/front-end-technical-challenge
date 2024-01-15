@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 
 import { Container, Divider, Typography } from "@mui/joy";
 import { ToastContainer, toast } from "react-toastify";
-import ListItemSkeleton from "../../components/ListItemSkeleton";
-import ModelList from "../../components/ModelList";
+import ListItemSkeleton from "../../components/ListItemSkeleton/ListItemSkeleton";
+import ModelList from "../../components/ModelList/ModelList";
 
 import { getModels } from "../../services";
 import { makeModelList } from "../../utils/dataConversion";
