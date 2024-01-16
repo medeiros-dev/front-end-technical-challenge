@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 type ModelListItem = {
   id: string;
   name: string;
@@ -15,4 +16,5 @@ type ModelsResponseItem = {
   model_name: string;
   sk: string;
   ts_updated: number;
+  pk?: string;
 };

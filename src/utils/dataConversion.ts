@@ -16,6 +16,9 @@ export const makeChartData = (
   featureList: FeatureList,
   analysisItemList: AnalysisItem[]
 ): ChartDataItem[] => {
+  if (featureList.length == 0 || analysisItemList.length == 0) {
+    return [];
+  }
   return featureList.map((feature) => {
     const chartDataItem: ChartDataItem = { name: feature };
     analysisItemList.forEach((item) => {
@@ -26,3 +29,6 @@ export const makeChartData = (
     return chartDataItem;
   });
 };
+
+//@ts-expect-error Using the type 'unknown' because that function receives a type specifically from Nivo
+export const makePercentage = (d: unknown): string => `${d.value}%`;

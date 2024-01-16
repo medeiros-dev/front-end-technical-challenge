@@ -11,8 +11,6 @@ export const getModels: () => Promise<ModelsResponseItem[]> = async () => {
   } catch (error) {
     if (axios.isAxiosError(error)) {
       handleAxiosError(error);
-    } else {
-      console.error("Unexpected error:", error);
     }
     throw error;
   }

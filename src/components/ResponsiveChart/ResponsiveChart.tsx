@@ -1,4 +1,5 @@
 import { ResponsiveBar } from "@nivo/bar";
+import { makePercentage } from "../../utils/dataConversion";
 
 const ResponsiveChart: React.FC<{
   data: ChartDataItem[];
@@ -9,7 +10,7 @@ const ResponsiveChart: React.FC<{
       data={data}
       keys={keys}
       indexBy="name"
-      label={(d) => `${d.value}%`}
+      label={makePercentage}
       margin={{ top: 120, right: 130, bottom: 120, left: 150 }}
       padding={0.2}
       groupMode="grouped"

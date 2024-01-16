@@ -1,9 +1,13 @@
 import { Divider, Typography } from "@mui/joy";
 import { Link } from "react-router-dom";
+import { NavBarTestIdEnum } from "./NavBarTestIdEnum";
 
 const Navbar = () => {
   return (
-    <nav className="p-4 border-b border-zinc-200 flex gap-4">
+    <nav
+      className="p-4 border-b border-zinc-200 flex gap-4"
+      data-testid={NavBarTestIdEnum.NAV_BAR}
+    >
       <Typography level="title-lg">FE Challenge</Typography>
       <Divider orientation="vertical" />
       <Link to="/">Home</Link>

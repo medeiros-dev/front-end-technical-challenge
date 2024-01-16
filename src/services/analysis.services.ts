@@ -4,16 +4,12 @@ import { getURL } from "../api/provider";
 
 export const getFeatureList: () => Promise<FeatureList> = async () => {
   try {
-    const response: AxiosResponse<FeatureList[]> = await axios.get(
-      `${getURL()}analysis?insight_name=feature_list`
-    );
-    //@ts-expect-error: Hardcoded due to a lack of contract in the API response.
+    const response: AxiosResponse<AnalysisFeatureResponseItem[]> =
+      await axios.get(`${getURL()}analysis?insight_name=feature_list`);
     return response.data[0].value;
   } catch (error) {
     if (axios.isAxiosError(error)) {
       handleAxiosError(error);
-    } else {
-      console.error("Unexpected error:", error);
     }
     throw error;
   }
@@ -28,8 +24,6 @@ export const getAnalysisData: () => Promise<AnalysisItem[]> = async () => {
   } catch (error) {
     if (axios.isAxiosError(error)) {
       handleAxiosError(error);
-    } else {
-      console.error("Unexpected error:", error);
     }
     throw error;
   }

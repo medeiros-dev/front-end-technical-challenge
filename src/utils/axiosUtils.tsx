@@ -7,6 +7,6 @@ export const handleAxiosError = (error: AxiosError): void => {
   } else if (error.request) {
     console.error("No response received from the server");
   } else {
-    console.error("Error setting up the request:", error.message);
+    console.error("Unexpected error:", error.message);
   }
 };

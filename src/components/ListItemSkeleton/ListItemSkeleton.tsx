@@ -1,4 +1,5 @@
 import { Alert, Card, Skeleton, Typography } from "@mui/joy";
+import { ListItemSkeletonTestIdEnum } from "./ListItemSkeletonTestIdEnum";
 
 const ListItemSkeleton = () => {
   return (
@@ -6,6 +7,7 @@ const ListItemSkeleton = () => {
       size="lg"
       className="flex justify-between items-center cursor-pointer duration-150 min-h-24 hover:shadow-md hover:shadow-blue-400 mt-4"
       orientation="horizontal"
+      data-testid={ListItemSkeletonTestIdEnum.LIST_ITEM_SKELETON}
     >
       <Typography className="font-bold self-center">
         <Skeleton loading={true}>List Item Skeleton</Skeleton>

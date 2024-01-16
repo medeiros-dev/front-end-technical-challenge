@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { Card, Container, Skeleton, Typography } from "@mui/joy";
-import ResponsiveChart from "../../components/ResponsiveChart";
+import ResponsiveChart from "../../components/ResponsiveChart/ResponsiveChart";
 import { ToastContainer, toast } from "react-toastify";
 import { getAnalysisData, getFeatureList } from "../../services";
 import { useParams } from "react-router-dom";
@@ -27,6 +27,8 @@ const Analysis = () => {
       const featureList = await getFeatureList();
       const analysisData = await getAnalysisData();
 
+      console.log(analysisData.map((analysisItem) => analysisItem.name));
+      console.log(makeChartData(featureList, analysisData));
       setKeysValues(analysisData.map((analysisItem) => analysisItem.name));
       setChartData(makeChartData(featureList, analysisData));
     } catch (error) {

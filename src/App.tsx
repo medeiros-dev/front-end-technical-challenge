@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/NavBar/Navbar";
 import "react-toastify/dist/ReactToastify.css";
