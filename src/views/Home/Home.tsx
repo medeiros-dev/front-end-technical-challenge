@@ -1,10 +1,14 @@
 import { Button, Container, Divider, Typography } from "@mui/joy";
+import { HomeTestIdEnum } from "./HomeTestIdEnum";
 import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <Container>
-      <div className="flex flex-col gap-4 pt-4">
+      <div
+        className="flex flex-col gap-4 pt-4"
+        data-testid={HomeTestIdEnum.HOME_SCREEN}
+      >
         <Typography level="h1">Introduction</Typography>
 
         <Divider />
@@ -30,6 +34,7 @@ const Home = () => {
             variant="solid"
             size="lg"
             sx={{ textDecoration: "underline" }}
+            data-testid={HomeTestIdEnum.INVENTORY_LINK}
           >
             Go to Inventory Page
           </Button>

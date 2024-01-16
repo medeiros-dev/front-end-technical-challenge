@@ -12,11 +12,10 @@ const mockAxios = new MockAdapter(axios);
 
 describe("getModels", () => {
   afterEach(() => {
-    mockAxios.reset(); // Reset the mock after each test
+    mockAxios.reset();
   });
 
   it("fetches models successfully from API", async () => {
-    // Mocking a successful response
     const responseData = [
       {
         model_version: 1,
@@ -36,12 +35,10 @@ describe("getModels", () => {
 
     const result = await getModels();
 
-    // Asserting that the function returns the correct data
     expect(result).toEqual(responseData);
   });
 
   it("handles Axios error", async () => {
-    // Mocking an Axios error
     mockAxios
       .onGet(`${API_URL}models`)
       .reply(500, { error: "Internal Server Error" });

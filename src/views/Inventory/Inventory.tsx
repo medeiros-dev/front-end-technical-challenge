@@ -7,6 +7,7 @@ import ModelList from "../../components/ModelList/ModelList";
 
 import { getModels } from "../../services";
 import { makeModelList } from "../../utils/dataConversion";
+import { InventoryTestIdEnum } from "./InventoryTestIdEnum";
 
 const Inventory = () => {
   const [ḿodelListData, setModelListData] = useState<ModelListItem[]>([]);
@@ -40,15 +41,20 @@ const Inventory = () => {
   return (
     <Container>
       <ToastContainer />
-      <header className="flex flex-col gap-4 pt-4 mb-4">
+      <header
+        className="flex flex-col gap-4 pt-4 mb-4"
+        data-testid={InventoryTestIdEnum.HEADER}
+      >
         <Typography level="h1">Models</Typography>
       </header>
       <Divider />
       <section>
         {isloading ? (
-          Array.from({ length: NUMBER_OF_SKELETONS }, (_, index) => (
-            <ListItemSkeleton key={index} />
-          ))
+          <div data-testid={InventoryTestIdEnum.LOADING_CONTAINER}>
+            {Array.from({ length: NUMBER_OF_SKELETONS }, (_, index) => (
+              <ListItemSkeleton key={index} />
+            ))}
+          </div>
         ) : (
           <ModelList data={ḿodelListData} />
         )}

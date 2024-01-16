@@ -1,6 +1,6 @@
 import axios from "axios";
-import { getAnalysisData, getFeatureList } from ".";
 import MockAdapter from "axios-mock-adapter";
+import { getAnalysisData, getFeatureList } from ".";
 import { getURL } from "../api/provider";
 
 jest.mock("../api/provider", () => ({
