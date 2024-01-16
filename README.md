@@ -1,18 +1,24 @@
 # Front End Technical Challenge
 
-## Introduction
+## Setup
 
-Welcome to the Frontend Challenge!
+Run project:
 
-This application allows users to view a "Models Inventory" with a comprehensive list of all their models, and to view an Analysis data visualization of these models.
+```shell
+npm run dev
+npm rum mockserver
+```
+Run tests:
+```shell
+npm run test
+```
+Run tests covarage:
 
-The following set of tasks is designed to resemble a simplified example of the challenges we tackle, simplified for time efficiency. The data, resembling real-world data, may require parsing and transformation for effective use.
+```shell
+npm run test:cov
+```
 
-`Tailwind CSS` and `Material UI - JOY` are included for your convenience. Feel free to utilize these or install your preferred tools.
-
-We encourage you to write your best, production-quality, reusable, scalable, and maintainable code. Good luck!
-
-## Tasks
+# Tasks
 
 ### Inventory Page
 
