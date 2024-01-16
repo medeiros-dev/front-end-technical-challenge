@@ -2,17 +2,17 @@
 
 ## Setup
 
-Run project:
+To run the project, use the following commands:
 
 ```shell
 npm run dev
 npm rum mockserver
 ```
-Run tests:
+To run the tests:
 ```shell
 npm run test
 ```
-Run tests covarage:
+To run the test coverage:
 
 ```shell
 npm run test:cov
